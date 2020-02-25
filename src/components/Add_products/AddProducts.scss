@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  margin: 0.5rem;
+  p {
+    color: chocolate;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  ul{
+    display: flex;
+    justify-items: center;
+    width: 15rem;
+    list-style: none;
+
+  }
+  .btn {
+    border:  1px solid gold;
+    width: 16rem;
+    height: 2rem;
+    margin: 0.5rem;
+    .btn-icon{
+      padding-left: 0.5rem;
+      font-size: 1.5rem;
+
+
+    }
+  }
+}
