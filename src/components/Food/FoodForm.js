@@ -1,7 +1,7 @@
 import React from 'react';
 import onion from "../icons/onion.png";
 
-const AddProductForm = ({
+const FoodForm = ({
                               expName,
                               expValue,
                               handleName,
@@ -44,4 +44,4 @@ const AddProductForm = ({
     );
 };
 
-export default AddProductForm;
+export default FoodForm;

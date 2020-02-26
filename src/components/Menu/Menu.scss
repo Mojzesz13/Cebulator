@@ -1,0 +1,108 @@
+body {
+  .container {
+    text-align: center;
+    background-image: url("../icons/14.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Merienda', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .alert {
+      width: 100vw;
+      text-align: center;
+      color: white;
+      background-image: url("../icons/test.jpg");
+      position: center;
+
+      font-size: 1.2rem;
+      font-family: 'Lato', sans-serif;
+      height: 5rem;
+      padding-top: 0.5rem;
+      -webkit-box-shadow: 0px 8px 6px -6px rgba(0,0,0,1);
+      -moz-box-shadow: 0px 8px 6px -6px rgba(0,0,0,1);
+      box-shadow: 0px 8px 6px -6px rgba(0,0,0,1);
+      span {
+        color: orangered;
+      }
+      .title{
+        color: orangered;
+        font-weight: 700;
+      }
+    }
+
+
+
+    .btn {
+      width: 16rem;
+      height: 2rem;
+      margin: 0.5rem;
+      background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+      border: none;
+      color: red;
+      font-weight: 100;
+      text-transform: uppercase;
+      border-radius: 6px;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+      text-align: center;
+      padding-bottom: 5px;
+      font-family: 'Merienda', sans-serif;
+      -webkit-box-shadow: 0px -8px 6px -6px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px -8px 6px -6px rgba(0, 0, 0, 1);
+      box-shadow: 0px -8px 6px -6px rgba(0, 0, 0, 1);
+
+      &:hover {
+        color: #ECE9E6;
+        font-weight: 700;
+        letter-spacing: 3px;
+        background: none;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.3s ease 0s;
+      }
+
+      span {
+        padding-left: 0.5rem;
+        padding-top: 1rem;
+      }
+
+      .btn-icon {
+        padding-left: 0.5rem;
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+      }
+    }
+
+
+
+    .logo {
+      margin-top: 2rem;
+    }
+
+    .footer {
+      width: 100vw;
+      height: 5rem;
+      text-align: center;
+      color: white;
+      background-image: url("../icons/test.jpg");
+      font-size: 1.2rem;
+      font-family: 'Lato', sans-serif;
+      -webkit-box-shadow: 0px -8px 6px -6px rgba(0,0,0,1);
+      -moz-box-shadow: 0px -8px 6px -6px rgba(0,0,0,1);
+      box-shadow: 0px -8px 6px -6px rgba(0,0,0,1);
+      .cebulator {
+        margin: 1rem;
+      }
+      span {
+        color: orangered;
+      }
+    }
+  }
+}
+
+
+

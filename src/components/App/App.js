@@ -1,11 +1,15 @@
 import React from 'react';
 
 import './App.scss';
-import AddProducts from "../Add_products/AddProducts";
+import Menu from "../Menu/Menu";
+import FoodAddProducts from "../Food/FoodAddProducts";
+
+
 
 function App() {
   return (
-    <AddProducts/>
+    <Menu/>
+
   );
 }
 

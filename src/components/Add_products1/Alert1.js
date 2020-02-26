@@ -1,23 +1,16 @@
 import React from 'react';
-import "./Alert.scss"
+import "./AddProducts1.scss"
 
 
-const Alert = ({expenditure}) => {
+const Alert1 = ({expenditure}) => {
 
     const todayDate =  new Date().toLocaleDateString('en-GB');
     const total = expenditure;
 
-    const total2 = (total)=> {total.reduce((acc, curr) =>{
-        return (acc += parseInt(curr.amount));
-    },0)} ;
-
-
-
-
     if(expenditure.length ===0){
         return (
             <div className="alert">
-                <p className="budget">budzet</p>
+                <p className="title">Cebulator</p>
                 <p className="Expenses">Expenses:<span> 0</span> </p>
                 <p className="data">{todayDate} </p>
             </div>
@@ -39,4 +32,4 @@ const Alert = ({expenditure}) => {
     }
 };
 
-export default Alert;
+export default Alert1;
