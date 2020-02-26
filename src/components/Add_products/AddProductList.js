@@ -1,19 +1,23 @@
 import React from 'react';
 import {FaTrashAlt} from "react-icons/fa";
-import {FaRegWindowClose} from "react-icons/fa";
+import close from "../icons/close.png";
+import logo from "../icons/onionLogo.png";
 
 
-const Add_Product_List = ({
+
+
+const AddProductList = ({
                               expenditure,
                               handleDelete,
                               deleteExpenditure
                           }) => {
     if (expenditure.length === 0) {
-        return null
+        return <div className="logo"><img  src={logo} alt="onion"/> </div>
 
     }
 
     return (
+
         <div>
             <ul className="list">
                 <div className="itemName">
@@ -27,10 +31,11 @@ const Add_Product_List = ({
                             <button className="delete-btn"
                                     aria-label="delete button"
                                     onClick={() => handleDelete(item.id)}>
-                                <FaRegWindowClose/></button>
+                                <img src={close} alt="onion"/></button>
                         </li>
                     })}
                 </div>
+
             </ul>
             {expenditure.length > 0 && (<button className="btn" onClick={deleteExpenditure}>delete expenditure
                 <FaTrashAlt className="btn-icon"/></button>)}
@@ -39,4 +44,4 @@ const Add_Product_List = ({
     );
 };
 
-export default Add_Product_List;
+export default AddProductList;

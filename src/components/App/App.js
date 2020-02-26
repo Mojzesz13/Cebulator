@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from '../../logo.svg';
+
 import './App.scss';
+import AddProducts from "../Add_products/AddProducts";
 
 function App() {
   return (
-    <p>test</p>
+    <AddProducts/>
   );
 }
 

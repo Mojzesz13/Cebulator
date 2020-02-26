@@ -1,7 +1,7 @@
 import React from 'react';
-import {IoMdAddCircle} from "react-icons/io";
+import onion from "../icons/onion.png";
 
-const Add_Product_Form = ({
+const AddProductForm = ({
                               expName,
                               expValue,
                               handleName,
@@ -12,7 +12,7 @@ const Add_Product_Form = ({
         <form onSubmit={handleSubmit}>
             <div className="form-main">
                 <div className="form-group">
-                    <lable htmlFor="name">name</lable>
+                    <lable htmlFor="name"></lable>
                     <input
                         type="text"
                         className="form-control"
@@ -25,7 +25,7 @@ const Add_Product_Form = ({
                 </div>
 
                 <div className="form-group">
-                    <lable htmlFor="amount">amout</lable>
+                    <lable htmlFor="amount"></lable>
                     <input
                         type="number"
                         className="form-control"
@@ -37,12 +37,11 @@ const Add_Product_Form = ({
                     />
                 </div>
                 <button type="submit" className="btn">
-                    submit
-                    <IoMdAddCircle className="btn-icon"/>
+                    Submit <span><img className="onionIcon"  src={onion} alt="onion"/></span>
                 </button>
             </div>
         </form>
     );
 };
 
-export default Add_Product_Form;
+export default AddProductForm;
