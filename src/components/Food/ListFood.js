@@ -6,7 +6,7 @@ import logo from "../icons/onionLogo.png";
 
 
 
-const AddProductList1 = ({
+const ListFood = ({
                               expenditure,
                               handleDelete,
                               deleteExpenditure
@@ -44,4 +44,4 @@ const AddProductList1 = ({
     );
 };
 
-export default AddProductList1;
+export default ListFood;

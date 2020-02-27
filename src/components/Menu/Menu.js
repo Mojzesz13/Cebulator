@@ -3,21 +3,29 @@ import AlertMenu from "./AlertMenu";
 import Footer from "./Footer"
 import "./Menu.scss"
 import onion from "../icons/onion.png";
+import {HashRouter, Route, Switch, NavLink} from "react-router-dom"
+import Toolbar from "../Toolbar/Toolbar";
+
 
 
 const Menu = () => {
-    const categories = ["food", 'domestic'," transport", "entertiment"];
+    const categories = ["Food", 'Domestic'," Transport", "Entertainment"];
 
     return (
         <>
             <div className="container">
-                <AlertMenu/>
+                {/*<AlertMenu />*/}
+                <Toolbar categories={categories}/>
                 <main className="categories">
-                    {categories.map(category=>(<button className="btn">{category}
-                        <span><img className="onionIcon"  src={onion} alt="onion"/></span></button>))}
+                    {categories.map(category=>(<NavLink to={"/category/"+ category} className="btn">{category}
+                        <span><img className="onionIcon"  src={onion} alt="onion"/></span></NavLink>))}
+
                 </main>
                 <Footer/>
             </div>
+
+
+
         </>
 
     );

@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import Alert1 from "./Alert1";
-import AddProductForm1 from "./AddProductForm1";
-import AddProductList1 from "./AddProductList1";
-import FooterProduct1 from "./FooterProduct1"
-import "./AddProducts1.scss"
+import AlertFood from "./AlertFood";
+import FormFood from "./FormFood";
+import ListFood from "./ListFood";
+import FooterFood from "./FooterFood"
+import "./AddProductsFood.scss"
 import uuid from "uuid/v4"
 
-const AddProducts1 = () => {
+const AddProductsFood = () => {
 
     const initialExpenditure = localStorage.getItem("expenditure")?
         JSON.parse(localStorage.getItem("expenditure")): [];
@@ -52,27 +52,27 @@ const AddProducts1 = () => {
     return (
         <>
             <div className="container">
-            <Alert1 expenditure={expenditure}/>
+            <AlertFood expenditure={expenditure}/>
             <header style={  {color:"black"}}> Food </header>
             <main className="Add products">
-                <AddProductForm1 expName={expName}
-                                expValue={expValue}
-                                handleName={handleName}
-                                handleValue={handleValue}
-                                handleSubmit={handleSubmit}
+                <FormFood expName={expName}
+                          expValue={expValue}
+                          handleName={handleName}
+                          handleValue={handleValue}
+                          handleSubmit={handleSubmit}
                 />
-                <AddProductList1 expenditure={expenditure}
-                                handleDelete={handleDelete}
-                                deleteExpenditure={deleteExpenditure}/>
+                <ListFood expenditure={expenditure}
+                          handleDelete={handleDelete}
+                          deleteExpenditure={deleteExpenditure}/>
             </main>
-            <FooterProduct1 expenditure={expenditure}/>
+            <FooterFood expenditure={expenditure}/>
             </div>
         </>
 
     );
 };
 
-export default AddProducts1;
+export default AddProductsFood;
 
 
 //

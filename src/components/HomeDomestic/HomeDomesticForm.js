@@ -1,7 +1,8 @@
 import React from 'react';
 import onion from "../icons/onion.png";
+import "./HomeDomestic.scss"
 
-const AddProductForm1 = ({
+const HomeDomesticForm = ({
                               expName,
                               expValue,
                               handleName,
@@ -44,4 +45,4 @@ const AddProductForm1 = ({
     );
 };
 
-export default AddProductForm1;
+export default HomeDomesticForm;

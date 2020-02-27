@@ -12,7 +12,7 @@ const AlertMenu = ({expenditure}) => {
 
 
         <div className="alert">
-            <p className="budget">budzet</p>
+            <p className="title">CEBULATOR</p>
             <p className="Expenses">Expenses:</p>
             <p className="data">{todayDate} </p>
         </div>

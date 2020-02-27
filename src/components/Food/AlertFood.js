@@ -1,8 +1,8 @@
 import React from 'react';
-import "./FoodAddProducts.scss"
+import "./AddProductsFood.scss"
 
 
-const FoodAlert = ({expenditure}) => {
+const AlertFood = ({expenditure}) => {
 
     const todayDate =  new Date().toLocaleDateString('en-GB');
     const total = expenditure;
@@ -32,4 +32,4 @@ const FoodAlert = ({expenditure}) => {
     }
 };
 
-export default FoodAlert;
+export default AlertFood;

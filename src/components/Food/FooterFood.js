@@ -1,11 +1,11 @@
 import React from 'react';
 import logoFooter from "../icons/onionFooter.png";
-import "./AddProducts1.scss"
+import "./AddProductsFood.scss"
 
 
 
 
-const FooterProduct1 = ({expenditure}) => {
+const FooterFood = ({expenditure}) => {
     return (
         <div className="footer">
             <p className="cebulator" >For the money, which you have spent you should be able to buy
@@ -18,4 +18,4 @@ const FooterProduct1 = ({expenditure}) => {
     );
 };
 
-export default FooterProduct1;
+export default FooterFood;

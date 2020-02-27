@@ -1,8 +1,8 @@
 import React from 'react';
-import "./AddProducts1.scss"
+import "./AddProductsBase.scss"
 
 
-const Alert1 = ({expenditure}) => {
+const AlertBaset = ({expenditure}) => {
 
     const todayDate =  new Date().toLocaleDateString('en-GB');
     const total = expenditure;
@@ -32,4 +32,4 @@ const Alert1 = ({expenditure}) => {
     }
 };
 
-export default Alert1;
+export default AlertBaset;

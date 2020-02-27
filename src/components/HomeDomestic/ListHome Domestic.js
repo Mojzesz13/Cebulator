@@ -1,4 +1,5 @@
 import React from 'react';
+import "./HomeDomestic.scss"
 import {FaTrashAlt} from "react-icons/fa";
 import close from "../icons/close.png";
 import logo from "../icons/onionLogo.png";
@@ -6,7 +7,7 @@ import logo from "../icons/onionLogo.png";
 
 
 
-const FoodList = ({
+const ListHomeDomestic = ({
                               expenditure,
                               handleDelete,
                               deleteExpenditure
@@ -44,4 +45,4 @@ const FoodList = ({
     );
 };
 
-export default FoodList;
+export default ListHomeDomestic;

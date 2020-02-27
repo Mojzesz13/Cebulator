@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import FoodAlert from "./FoodAlert";
-import FoodForm from "./FoodForm";
-import FoodList from "./FoodList";
-import FoodFooter from "./FoodFooter"
-import "./FoodAddProducts.scss"
+import AlertHomeDomestic from "./AlertHomeDomestic";
+import HomeDomesticForm from "./HomeDomesticForm";
+import ListHomeDomestic from "./ListHome Domestic";
+import FooterHomeDomestic from "./FooterHomeDomestic"
+import "./HomeDomestic.scss"
 import uuid from "uuid/v4"
 
-const FoodAddProducts = () => {
+const HomeDomestic = () => {
 
     const initialExpenditure = localStorage.getItem("expenditure")?
         JSON.parse(localStorage.getItem("expenditure")): [];
@@ -52,27 +52,27 @@ const FoodAddProducts = () => {
     return (
         <>
             <div className="container">
-            <FoodAlert expenditure={expenditure}/>
-            <header style={  {color:"black"}}> Food </header>
+            <AlertHomeDomestic expenditure={expenditure}/>
+            <header style={  {color:"black"}}>Home Domestic</header>
             <main className="Add products">
-                <FoodForm expName={expName}
-                          expValue={expValue}
-                          handleName={handleName}
-                          handleValue={handleValue}
-                          handleSubmit={handleSubmit}
+                <HomeDomesticForm expName={expName}
+                                  expValue={expValue}
+                                  handleName={handleName}
+                                  handleValue={handleValue}
+                                  handleSubmit={handleSubmit}
                 />
-                <FoodList expenditure={expenditure}
-                          handleDelete={handleDelete}
-                          deleteExpenditure={deleteExpenditure}/>
+                <ListHomeDomestic expenditure={expenditure}
+                                  handleDelete={handleDelete}
+                                  deleteExpenditure={deleteExpenditure}/>
             </main>
-            <FoodFooter expenditure={expenditure}/>
+            <FooterHomeDomestic expenditure={expenditure}/>
             </div>
         </>
 
     );
 };
 
-export default FoodAddProducts;
+export default HomeDomestic;
 
 
 //
