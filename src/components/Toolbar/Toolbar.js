@@ -2,14 +2,17 @@ import React from 'react';
 import {NavLink} from "react-router-dom"
 import onion from "../icons/onion.png";
 import "./Toolbar.scss"
+import DrawerToggleButton from "../SideDrawer/DrawerToggleButton"
 
 
-const Toolbar = ({categories}) => {
+const Toolbar = ({categories, handlerDrawerToggle}) => {
     return (
 
       <header className="toolbar">
        <nav className="toolbar__navigation">
-        <div className="burger"> </div>
+        <div>
+        <DrawerToggleButton click={handlerDrawerToggle}/>
+        </div>
            <div className="toolbar__logo"><a href='/'>LOGO</a></div>
            <div className="spacer"></div>
            <div className="toolbar__navigation__items">
