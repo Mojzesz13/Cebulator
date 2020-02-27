@@ -7,6 +7,7 @@ import {NavLink} from "react-router-dom"
 import Toolbar from "../Toolbar/Toolbar";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import BackDrop from "../SideDrawer/BackDrop";
+import Logo from "../icons/mainLogo2.png";
 
 
 
@@ -40,7 +41,9 @@ const Menu = () => {
                 <Toolbar categories={categories} handlerDrawerToggle={handlerDrawerToggleClick}/>
                 {sideDrawer}
                 {backDrop}
+                <div> <img className="onionIcon"  src={Logo} alt="onion"/></div>
                 <main className="categories">
+
                     {categories.map(category=>(<NavLink to={"/category/"+ category} className="btn">{category}
                         <span><img className="onionIcon"  src={onion} alt="onion"/></span></NavLink>))}
 

@@ -7,6 +7,45 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton"
 const Toolbar = ({categories, handlerDrawerToggle, expenditure}) => {
 
 
+    // const todayDate =  new Date().toLocaleDateString('en-GB');
+    // const total = expenditure;
+    // let toolbarStatement;
+
+   //
+   //  if(expenditure.length ===0){
+   //      return (
+   //
+   //
+   //          toolbarStatement = (
+   //          <div className="toolbarStatement">
+   //              <p className="Expenses">Expenses:<span> 0</span> </p>
+   //              <p className="data">{todayDate} </p>
+   //          </div>
+   //      );
+   // else {
+   //
+   //          toolbarStatement =
+   //
+   //
+   //
+   //          <div className="alert">
+   //              <p className="budget">budzet</p>
+   //              <p className="Expenses">Expenses:<span> {total.reduce((acc, curr) =>{
+   //                  return (acc += parseInt(curr.amount));
+   //              },0)} {" "}zł</span></p>
+   //              <p className="data">{todayDate} </p>
+   //          </div>
+   //      );
+   //  }
+   //  };
+
+
+
+
+
+
+
+
 
 
 
