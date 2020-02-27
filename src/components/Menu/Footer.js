@@ -1,5 +1,5 @@
 import React from 'react';
-import logoFooter from "../icons/onionFooter.png";
+import logoFooter from "../icons/onion Footer2.png";
 import "./Menu.scss"
 
 

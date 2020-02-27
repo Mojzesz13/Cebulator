@@ -1,20 +1,12 @@
-
 .toolbar {
   width: 100vw;
   height: 5rem;
   position: static;
   background-image: url("../icons/test.jpg");
-  -webkit-box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 1);
-  box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 1);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 1);
   text-align: left;
-
-
-
-  .burger{
-
-  }
-
 
   .toolbar__navigation {
     display: flex;
@@ -27,7 +19,6 @@
       flex: 1;
     }
 
-
     .toolbar__navigation__items {
       text-decoration: none;
       margin: 0;
@@ -37,33 +28,47 @@
         display: flex;
         list-style: none;
 
+        a {
+          text-decoration: none;
+          color: #ECE9E6;
+          padding: 0 0.2rem;
+        }
 
-          a {
-            text-decoration: none;
-            color: #ECE9E6;
-            padding:0 0.2rem;
+        a:hover {
+          color: orangered;
+        }
+
+        a:active {
+          color: yellow;
+        }
+      }
+    }
+
+    .toolbar__logo {
+      margin-left: 1rem;
+      font-size: 2rem;
+      font-family: "Dancing Script", sans-serif ;
+      font-weight:700;
 
 
-          }
-      a:hover {
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        margin: 0;
         color: orangered;
       }
-      a:active{
-        color: yellow;
-      }
-      }
-    }
-
-    .toolbar__logo{
-      margin-left: 1rem;
-
-    a{
-      font-weight: 700;
-      text-decoration: none;
-      margin: 0;
-      color: orangered;
-    }
     }
   }
 }
 
+@media (max-width: 768px) {
+  .toolbar__navigation__items{
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+}

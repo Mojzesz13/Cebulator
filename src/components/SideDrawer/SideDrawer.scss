@@ -1,12 +1,19 @@
 .side-drawer {
   height: 100vh;
-  background-image: url("../icons/14.jpg");
-  box-shadow: 2px 0 5px rgba(0,0,0, 0.5);
+  //background-image: url("../icons/14.jpg");
+  background-image: url("../icons/Sidebarwallpaper.jpg");
+  background-size: cover;
+  background-position: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 70vw;
   z-index: 200;
+  -webkit-box-shadow: 6px -1px 27px 0px rgba(33,173,37,1);
+  -moz-box-shadow: 6px -1px 27px 0px rgba(33,173,37,1);
+  box-shadow: 6px -1px 27px 0px rgba(33,173,37,1);
+  //transform: translateX(-90%);
+  //transition: transform 1s ease-out;
 
   ul {
     list-style: none;
@@ -14,25 +21,39 @@
     flex-direction: column;
     height: 100%;
     justify-content: center;
+    padding-top: 10rem;
 
     li {
       margin: 0.5rem 0;
 
 
-    a {
-      text-decoration: none;
-      color: #ECE9E6;
-      font-size: 2rem;
+      a {
+        text-decoration: none;
+        color:  #FFBB12;
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: 3px 5px 2px #474747;
 
 
+      }
 
-    }
-    a:hover {
-      color: orangered;
-    }
-    a:active{
-      color: yellow;
+      a:hover {
+        color: #FFEE1F;
+      }
+
+      a:active {
+        color: #9EFF12;
+      }
     }
   }
+}
+//.side-drawer .open {
+//  transform: translateX(0);
+//}
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
   }
+
 }

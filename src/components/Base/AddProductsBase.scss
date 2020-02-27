@@ -46,6 +46,9 @@
       width: 25rem;
       height: 12rem;
       overflow: scroll;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
     }
     .ItemAmount{
       margin-right: auto;
@@ -53,14 +56,17 @@
       ul {
         display: flex;
         width: 15rem;
-        list-style: none;
+
 
         li {
-          line-height: 2rem
+          line-height: 2rem;
+
         }
       }
     }
-
+      .data{
+        margin-bottom: 0.3rem;
+      }
 
     .btn {
       width: 16rem;

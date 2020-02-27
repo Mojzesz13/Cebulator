@@ -5,6 +5,7 @@ import ListBase from "./ListBase";
 import FooterBase from "./FooterBase"
 import "./AddProductsBase.scss"
 import uuid from "uuid/v4"
+import Toolbar from "../Toolbar/Toolbar";
 
 const Base = (props) => {
 
@@ -56,6 +57,7 @@ const Base = (props) => {
         <>
             <div className="container">
             <AlertBaset expenditure={fileredExpenditure}/>
+            {/*<Toolbar expenditure={fileredExpenditure}/>*/}
             <div className="container__title" style={  {color:"black"}}> {props.match.params.category} </div>
             <main className="Add products">
                 <FormBase expName={expName}
