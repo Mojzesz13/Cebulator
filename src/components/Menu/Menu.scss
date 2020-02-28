@@ -80,8 +80,16 @@ body {
     }
 
     .categories{
+      display: flex;
+      flex-direction: row;
+      width: 20rem;
+      height: 13rem;
+      overflow: scroll;
+      padding-left: 1.4rem;
+      .categoryClose{
 
 
+      }
     }
 
     .logo {

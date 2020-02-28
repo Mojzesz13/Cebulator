@@ -5,11 +5,11 @@ import "./Menu.scss"
 
 
 
-const Footer = ({expenditure}) => {
+const Footer = ({expenditure, sum}) => {
     return (
         <div className="footer">
             <p className="cebulator" >For the money, which you have spent you should be able to buy
-
+                {sum} pl
                 <span><img className="onion"  src={logoFooter} alt="onion"/></span></p>
         </div>
     );

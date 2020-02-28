@@ -13,6 +13,8 @@ const FooterBase = ({expenditure}) => {
                     return (acc += parseInt(curr.amount)/1.8);
                 },0).toFixed(1)} {" "}</span>
                 kg
+
+
                 <span><img className="onion"  src={logoFooter} alt="onion"/></span></p>
         </div>
     );

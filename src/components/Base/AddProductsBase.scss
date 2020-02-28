@@ -1,5 +1,4 @@
-
-  .container {
+.container {
     text-align: center;
     background-image: url("../icons/14.jpg");
     background-position: center;
@@ -12,7 +11,6 @@
     flex-direction: column;
 
     .alert {
-      width: 100vw;
       text-align: center;
       color: white;
       background-image: url("../icons/test.jpg");
@@ -24,6 +22,12 @@
       -webkit-box-shadow: 0px 8px 6px -6px rgba(0,0,0,1);
       -moz-box-shadow: 0px 8px 6px -6px rgba(0,0,0,1);
       box-shadow: 0px 8px 6px -6px rgba(0,0,0,1);
+      display: flex;
+      justify-content: space-around;
+      .toolbar__toggle-button{
+        margin-right: 10rem;
+      }
+
       span {
         color: orangered;
       }
@@ -39,11 +43,10 @@
       font-weight: 700;
     }
 
-
     .list {
       padding-top: 2rem;
-      width: 25rem;
-      height: 12rem;
+      width: 15rem;
+      height: 7rem;
       overflow: scroll;
       display: flex;
       justify-content: space-between;
@@ -56,7 +59,6 @@
         display: flex;
         width: 15rem;
 
-
         li {
           line-height: 2rem;
 
@@ -68,7 +70,7 @@
       }
 
     .btn {
-      width: 16rem;
+      width: 1.6rem;
       height: 2rem;
       margin: 0.5rem;
       background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
@@ -85,6 +87,11 @@
       -webkit-box-shadow: 0px -8px 6px -6px rgba(0, 0, 0, 1);
       -moz-box-shadow: 0px -8px 6px -6px rgba(0, 0, 0, 1);
       box-shadow: 0px -8px 6px -6px rgba(0, 0, 0, 1);
+      .categoryClose{
+        float: right;
+        margin-right: 0.2rem;
+        margin-top: 0.2rem;
+      }
 
       &:hover {
         color: #ECE9E6;
@@ -107,6 +114,13 @@
         padding-top: 0.5rem;
       }
     }
+    .addNewCategory input {
+      border-radius: 5px;
+    }
+
+
+
+
 
     .form-group{
       margin-top: 2rem;
@@ -127,17 +141,18 @@
 
     .footer {
       width: 100vw;
-      height: 5rem;
+      height: 10vh;
       text-align: center;
       color: white;
       background-image: url("../icons/test.jpg");
-      font-size: 1.2rem;
+      ;
       font-family: 'Lato', sans-serif;
       -webkit-box-shadow: 0px -8px 6px -6px rgba(0,0,0,1);
       -moz-box-shadow: 0px -8px 6px -6px rgba(0,0,0,1);
       box-shadow: 0px -8px 6px -6px rgba(0,0,0,1);
       .cebulator {
         margin: 1rem;
+        font-size: 1rem
       }
       span {
         color: orangered;

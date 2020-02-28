@@ -1,20 +1,18 @@
 import React, {useState} from 'react';
-import AlertMenu from "./AlertMenu";
-import Footer from "./Footer"
-import "./Menu.scss"
-import onion from "../icons/onion.png";
 import {NavLink} from "react-router-dom"
+import "./Menu.scss"
 import Toolbar from "../Toolbar/Toolbar";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import BackDrop from "../SideDrawer/BackDrop";
+import Footer from "./Footer"
 import Logo from "../icons/mainLogo2.png";
-
-
+import closeCategory from "../icons/closeCategory.png";
+import onion from "../icons/onion.png";
 
 const Menu = () => {
-    const categories = ["Food", 'Domestic'," Transport", "Entertainment"];
+    const [categories, setCategories] = useState(["Food", 'Domestic'," Transport", "Entertainment", "a", "b"]);
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
-
+    const [taskInput, setTaskInput] = useState("");
 
     const handlerDrawerToggleClick = ()=> {
         setSideDrawerOpen((prevState) => {
@@ -26,6 +24,21 @@ const Menu = () => {
         setSideDrawerOpen( false)
     };
 
+    const handlerAddNewCategory = ()=>{
+        setCategories(prevState => [
+            ...prevState, taskInput
+        ]);
+    };
+
+    // const handlerDeleteCategory = (category,e)=>{
+    //
+    //     console.log(category)
+    //
+    //     // let deleteCategory = categories.filter(item => item[e] !==e);
+    //     //     setCategories(deleteCategory)
+    //
+    // };
+
     let backDrop;
     let sideDrawer;
 
@@ -34,84 +47,50 @@ const Menu = () => {
         backDrop = <BackDrop click={handlerBackdropClick}/>
     }
 
+    // let sumOfCost = ()=>{
+    //
+    //     let test = localStorage.getItem("expenditure").map((item)=>{
+    //         return item.name
+    //     });
+    //         return console.log(test);
+    //
+    // };
+
+
     return (
         <>
             <div className="container">
-                {/*<AlertMenu />*/}
                 <Toolbar categories={categories} handlerDrawerToggle={handlerDrawerToggleClick}/>
                 {sideDrawer}
                 {backDrop}
                 <div> <img className="onionIcon"  src={Logo} alt="onion"/></div>
                 <main className="categories">
-
-                    {categories.map(category=>(<NavLink to={"/category/"+ category} className="btn">{category}
-                        <span><img className="onionIcon"  src={onion} alt="onion"/></span></NavLink>))}
-
+                    <div>
+                    {categories.map(category=>(<NavLink to={"/category/"+ category} className="btn category">{category}
+                        <span><img className="onionIcon"  src={onion} alt="onion"/> </span>
+                        </NavLink> ))}
+                    </div>
+                    {/*<div>*/}
+                    {/*{categories.map(category=>(*/}
+                    {/*<img className="categoryClose"*/}
+                    {/*     src={closeCategory }*/}
+                    {/*     alt="onion"*/}
+                    {/*     onClick={(e)=>handlerDeleteCategory(category,e)}/>))}*/}
+                    {/*</div>*/}
                 </main>
+                <div className="addNewCategory">
+                    <input type="text"
+                           placeholder="New category name"
+                           value={taskInput}
+                           onChange= {(e)=>{setTaskInput(e.target.value)}}/>
+                <button className="btn addNewCat" onClick={handlerAddNewCategory}>Add new category</button>
+                </div>
                 <Footer/>
+                {/*<Footer sum={sumOfCost()}/>*/}
             </div>
-
         </>
-
     );
 };
 
 export default Menu;
 
-
-
-// import React, {useState} from 'react';
-// import AlertMenu from "./AlertMenu";
-// import Footer from "./Footer"
-// import "./Menu.scss"
-// import onion from "../icons/onion.png";
-// import {NavLink} from "react-router-dom"
-// import Toolbar from "../Toolbar/Toolbar";
-// import SideDrawer from "../SideDrawer/SideDrawer";
-// import BackDrop from "../SideDrawer/BackDrop";
-//
-//
-//
-// const Menu = () => {
-//     const categories = ["Food", 'Domestic'," Transport", "Entertainment"];
-//     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
-//
-//
-//     const handlerDrawerToggleClick = ()=> {
-//         setSideDrawerOpen((prevState) => {
-//             return {sideDrawerOpen: !prevState.sideDrawerOpen}
-//         });
-//     };
-//
-//     const handlerBackdropClick = () => {
-//         setSideDrawerOpen( false)
-//     };
-//
-//
-//     let backDrop;
-//
-//     if (sideDrawerOpen) {
-//         backDrop = <BackDrop click={handlerBackdropClick}/>
-//     }
-//
-//     return (
-//         <>
-//             <div className="container">
-//                 {/*<AlertMenu />*/}
-//                 <Toolbar categories={categories} handlerDrawerToggle={handlerDrawerToggleClick}/>
-//                 <SideDrawer categories={categories} show={sideDrawerOpen}/>
-//                 {backDrop}
-//                 <main className="categories">
-//                     {categories.map(category=>(<NavLink to={"/category/"+ category} className="btn">{category}
-//                         <span><img className="onionIcon"  src={onion} alt="onion"/></span></NavLink>))}
-//
-//                 </main>
-//                 <Footer/>
-//             </div>
-//
-//         </>
-//
-//     );
-// };
-//
-// export default Menu;

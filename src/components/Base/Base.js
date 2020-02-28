@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import AlertBaset from "./AlertBaset";
+import AlertBase from "./AlertBase";
 import FormBase from "./FormBase";
 import ListBase from "./ListBase";
 import FooterBase from "./FooterBase"
@@ -47,17 +47,17 @@ const Base = (props) => {
 
     const deleteExpenditure =()=>{
 
-        const fileredExpenditure = expenditure.filter((element)=>(element.category !== props.match.params.category));
-        setExpenditure(fileredExpenditure);
+        const filteredExpenditure = expenditure.filter((element)=>(element.category !== props.match.params.category));
+        setExpenditure(filteredExpenditure);
     };
 
-    const fileredExpenditure = expenditure.filter((element)=>(element.category === props.match.params.category));
+    const filteredExpenditure = expenditure.filter((element)=>(element.category === props.match.params.category));
 
     return (
         <>
             <div className="container">
-            <AlertBaset expenditure={fileredExpenditure}/>
-            {/*<Toolbar expenditure={fileredExpenditure}/>*/}
+            <AlertBase expenditure={filteredExpenditure}/>
+            {/*<Toolbar expenditure={filteredExpenditure}/>*/}
             <div className="container__title" style={  {color:"black"}}> {props.match.params.category} </div>
             <main className="Add products">
                 <FormBase expName={expName}
@@ -66,11 +66,11 @@ const Base = (props) => {
                           handleValue={handleValue}
                           handleSubmit={handleSubmit}
                 />
-                <ListBase expenditure={fileredExpenditure}
+                <ListBase expenditure={filteredExpenditure}
                           handleDelete={handleDelete}
                           deleteExpenditure={deleteExpenditure}/>
             </main>
-            <FooterBase expenditure={fileredExpenditure}/>
+            <FooterBase expenditure={filteredExpenditure}/>
             </div>
         </>
 
