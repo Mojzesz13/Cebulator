@@ -13,3 +13,4 @@ This App used following libraries:
 -   JavaScript
 -   react-router-dom v.5.1.2,
 -   React-react
+-   Sass
